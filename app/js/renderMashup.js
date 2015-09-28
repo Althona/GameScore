@@ -142,7 +142,7 @@ function renderOneSearch(search, latesed){
     div.setAttribute('id', 'searchDiv');
 
     if(latesed !== null){
-        if(latesed.length > 5){
+        if(latesed.length > 10){
             searchList.removeChild(searchList.firstChild);
             latesed.pop();
         }
@@ -257,7 +257,11 @@ function search(e) {
     e.preventDefault();
     var searchValue = document.getElementById("searchField").value;
     startSearch(searchValue);
-    latesedSearch(searchValue);
+
+    if(searchValue !== ""){
+        latesedSearch(searchValue);
+    }
+
 }
 
 function startSearch(searchValue){
