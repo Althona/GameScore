@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html manifest="manifest.appcache">
+<head lang="en">
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameScore</title>
+</head>
+<body>
+<div class="container container-fluid">
+
+    <div class="">
+        <div id="fb-root" class=" fb_reset"></div>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"></fb:login-button>
+        <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
+        <div id="status"></div>
+    </div>
+
+    <div class="text-center">
+        <h1 class="">GameScore</h1>
+        <div id="offline"></div>
+    </div>
+
+    <div class="row">
+        <div class="">
+            <div class="imaginary_container">
+                <form id='form' method="post">
+                <div class="input-group stylish-input-group">
+                    <input type="text" id="searchField" class="form-control"
+                                                placeholder="Search for game..."name="search">
+                    <span class="input-group-btn">
+                        <input type="submit" id='search' class="btn btn-default"  value="Go!">
+                    </span>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div id = "gif"></div>
+    </div>
+
+    <div id="searchList"></div>
+
+    <div id="top-5" class=""></div>
+
+    <div id='result' class="col-3"></div>
+
+</div>
+</body>
+<script src="js/ouath.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/renderMashup.js"></script>
+</html>

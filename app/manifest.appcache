@@ -1,0 +1,14 @@
+CACHE MANIFEST
+index.html
+js/renderMashup.js
+css/bootstrap.min.css
+css/style.css
+img/loader.gif
+img/noImg.png
+img/background.jpg
+
+NETWORK:
+*
+
+FALLBACK:
+/html/offline.html
